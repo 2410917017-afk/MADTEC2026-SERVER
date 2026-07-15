@@ -16,7 +16,7 @@ def crear_prueba(prueba: PruebaCreate, db: Session = Depends(get_db)):
     nueva = PruebasCETEVI(
 
         Id=prueba.Id,
-        Caso=prueba.Cas0,
+        Caso=prueba.Caso,
         Muestras=prueba.Muestras,
         Tiempo=prueba.Tiempo,
         FMax=prueba.FMax,

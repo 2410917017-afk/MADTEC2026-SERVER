@@ -50,15 +50,15 @@ def actualizar_caso(
             detail="Caso no encontrado"
         )
 
-    caso.Nombre = datos.Nombre,
-    caso.Tiempo = datos.Tiempo,
-    caso.Fuerza = datos.Fuerza,
-    caso.Compresion = datos.Compresion,
-    caso.Pulsos = datos.Pulsos,
-    caso.Material = datos.Material,
-    caso.Grosor = datos.Grosor,
-    caso.Separacion = datos.Separacion,
-    caso.Proximidad = datos.Proximidad,
+    caso.Nombre = datos.Nombre
+    caso.Tiempo = datos.Tiempo
+    caso.Fuerza = datos.Fuerza
+    caso.Compresion = datos.Compresion
+    caso.Pulsos = datos.Pulsos
+    caso.Material = datos.Material
+    caso.Grosor = datos.Grosor
+    caso.Separacion = datos.Separacion
+    caso.Proximidad = datos.Proximidad
 
     db.commit()
     db.refresh(caso)
