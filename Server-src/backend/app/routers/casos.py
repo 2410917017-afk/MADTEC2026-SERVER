@@ -23,7 +23,6 @@ def crear_caso(caso: CasoCreate, db: Session = Depends(get_db)):
         Material=caso.Material,
         Grosor=caso.Grosor,
         Separacion=caso.Separacion,
-        Proximidad=caso.Proximidad,
 
     )
 
@@ -58,7 +57,6 @@ def actualizar_caso(
     caso.Material = datos.Material
     caso.Grosor = datos.Grosor
     caso.Separacion = datos.Separacion
-    caso.Proximidad = datos.Proximidad
 
     db.commit()
     db.refresh(caso)

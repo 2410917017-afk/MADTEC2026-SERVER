@@ -10,7 +10,6 @@ class CasoBase(BaseModel):
     Material: str
     Grosor: float
     Separacion: float
-    Proximidad: float
 
 
 

@@ -23,7 +23,3 @@ class CasoSoldadura(Base):
     Grosor = Column(Float)
 
     Separacion = Column(Float)
-
-    Proximidad = Column(Float)
-
-    Desalineacion = Column(Float)
