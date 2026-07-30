@@ -63,6 +63,27 @@ source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
+## Modificar ruta de almacenamiento
+Si se desea modificar la ruta de almacenamiento para el servidor se debe modificar el contenido del apartado `volumes:` en el archivo `Server-src/docker/docker-compose.yml`
+-Para guardar imagenes se podría crear una carpeta `app/images/` y se programa para guardar ahí las imagenes que llegan a la API. Y en `volumes` se agrega:
+
+```yml
+  - "ruta del disco duro" : /app/images
+```
+
+- Para guardar las tablas de datos de Postgre, se reemplaza la línea:
+
+```yml
+volumes:
+  - ./postgres/data:/var/lib/postgresql/data
+```
+por
+
+```yml
+ volumes:
+    "ruta del disco duro":/var/lib/postgresql/data
+```
+
 
 ## Documentacion
 
