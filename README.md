@@ -68,7 +68,8 @@ Si se desea modificar la ruta de almacenamiento para el servidor se debe modific
 -Para guardar imagenes se podría crear una carpeta `app/images/` y se programa para guardar ahí las imagenes que llegan a la API. Y en `volumes` se agrega:
 
 ```yml
-  - "ruta del disco duro" : /app/images
+ volumes:
+   - "ruta del disco duro" : /app/images
 ```
 
 - Para guardar las tablas de datos de Postgre, se reemplaza la línea:
@@ -81,7 +82,7 @@ por
 
 ```yml
  volumes:
-    "ruta del disco duro":/var/lib/postgresql/data
+   - "ruta del disco duro":/var/lib/postgresql/data
 ```
 
 
