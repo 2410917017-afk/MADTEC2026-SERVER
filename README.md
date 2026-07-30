@@ -65,7 +65,7 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 ## Modificar ruta de almacenamiento
 Si se desea modificar la ruta de almacenamiento para el servidor se debe modificar el contenido del apartado `volumes:` en el archivo `Server-src/docker/docker-compose.yml`
--Para guardar imagenes se podría crear una carpeta `app/images/` y se programa para guardar ahí las imagenes que llegan a la API. Y en `volumes` se agrega:
+- Para guardar imagenes se podría crear una carpeta `app/images/` y se programa para guardar ahí las imagenes que llegan a la API. Y en `volumes` se agrega:
 
 ```yml
  volumes:
