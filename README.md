@@ -1,26 +1,30 @@
 # MADTEC2026 Server
 
-Backend FastAPI para registrar y consultar datos de pruebas de soldadura del laboratorio CETEVI-UAQ.
+> Backend FastAPI para registrar y consultar datos de pruebas de soldadura del laboratorio CETEVI-UAQ.
 
 El repositorio contiene solamente el servidor y la base de datos. La GUI vive en un repositorio separado y consume esta API por HTTP.
 
 ## Estructura
 
-```text
-Server-src/
-  backend/
-    app/
-      main.py              # Entrada FastAPI
-      database/            # Conexion SQLAlchemy
-      models/              # Modelos ORM
-      routers/             # Endpoints HTTP
-      schemas/             # Esquemas Pydantic
-    Dockerfile
-    requirements.txt
-  docker/
-    docker-compose.yml     # PostgreSQL + API
-    postgres/init.sql
-docs/
+```
+MADTEC2026-Server/
+│
+├── Server-src/
+│   ├── backend/
+│   │   ├──app/
+│   │   │    ├──main.py              # Entrada FastAPI
+│   │   │    ├──database/            # Conexion SQLAlchemy
+│   │   │    ├──models/              # Modelos ORM
+│   │   │    ├──routers/             # Endpoints HTTP
+│   │   │    └──schemas/             # Esquemas Pydantic
+│   │   ├── Dockerfile
+│   │   └── requirements.txt
+│   │
+│   └── docker/
+│       ├──docker-compose.yml     # PostgreSQL + API
+│       └──postgres/
+│          └──init.sql
+└── docs/
 ```
 
 ## Requisitos
